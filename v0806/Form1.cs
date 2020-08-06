@@ -25,5 +25,11 @@ namespace v0806
             label1.Left += vx;
             label1.Top += vy;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            vx *= -1;
+            vy *= -1;
+        }
     }
 }
