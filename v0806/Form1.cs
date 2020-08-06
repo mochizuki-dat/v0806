@@ -12,10 +12,12 @@ namespace v0806
 {
     public partial class Form1 : Form
     {
-        int vx = -30;
+        int vx = -10;
         int vy = -10;
+        int vl = 110;
         int wi;
         int he;
+        
 
         public Form1()
         {
@@ -32,19 +34,19 @@ namespace v0806
 
             if (label1.Left < 0)
             {
-                vx = Math.Abs(vx);
+                vx = Math.Abs(vx) * vl/100;
             }
             if (label1.Top < 0)
             {
-                vy = Math.Abs(vy);
+                vy = Math.Abs(vy) * vl/100;
             }
             if (label1.Right > wi)
             {
-                vx = -Math.Abs(vx);
+                vx = -Math.Abs(vx) * vl/100;
             }
             if (label1.Bottom > he)
             {
-                vy = -Math.Abs(vy);
+                vy = -Math.Abs(vy) * vl/100;
             }
         }
 
