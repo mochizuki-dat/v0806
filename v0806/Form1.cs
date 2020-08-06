@@ -12,7 +12,7 @@ namespace v0806
 {
     public partial class Form1 : Form
     {
-        int vx = -10;
+        int vx = -30;
         int vy = -10;
         int wi;
         int he;
@@ -32,19 +32,19 @@ namespace v0806
 
             if (label1.Left < 0)
             {
-                vx = 10;
+                vx = Math.Abs(vx);
             }
             if (label1.Top < 0)
             {
-                vy = 10;
+                vy = Math.Abs(vy);
             }
             if (label1.Right > wi)
             {
-                vx = -10;
+                vx = -Math.Abs(vx);
             }
             if (label1.Bottom > he)
             {
-                vy = -10;
+                vy = -Math.Abs(vy);
             }
         }
 
